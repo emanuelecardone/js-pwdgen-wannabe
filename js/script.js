@@ -37,37 +37,31 @@ Vuoi cambiare password? (Rispondi si o no)`);
             // Apro la domanda (uso una label)
             question: {
 
-            // Se risponde si..    
+                // Se risponde si..    
                 if(userAnswer != null && userAnswer == 'si'){
                     // Chiedo la nuova password
                     let newUserPassword = prompt(`Inserisci manualmente la nuova password,
 ${firstName} ${lastName}:`);
-                    console.log(newUserPassword);
-                    // La password in output assumerà il valore della nuova
-                    userPassword = newUserPassword;
-                    console.log(userPassword);
-                    // Stampo la password in pagina (nella stringa target dell'h1)
-                    document.getElementById('user-password').innerHTML = userPassword;
-                    // Interrompo la domanda
-                    break question;
+                console.log(newUserPassword);
+                
+                    if(newUserPassword != null){
+                        // La password in output assumerà il valore della nuova
+                        userPassword = newUserPassword;
+                        console.log(userPassword);
+                        // Stampo la password in pagina (nella stringa target dell'h1)
+                        document.getElementById('user-password').innerHTML = userPassword;
+                        // Interrompo la domanda
+                        break question;
+                    }
                 }
                 // ..altrimenti   
                 else{
-                    // Stampo la password in pagina (nella stringa target dell'h1)
-                    document.getElementById('user-password').innerHTML = userPassword;
-                    // Interrompo la domanda
-                    break question;
+                // Stampo la password in pagina (nella stringa target dell'h1)
+                document.getElementById('user-password').innerHTML = userPassword;
+                // Interrompo la domanda
+                break question;
                 }
             }
         }
     }
 }
-
-
-
-
-
-
-
-
-
