@@ -59,6 +59,12 @@ ${firstName} ${lastName}:`);
         userPassword = newUserPassword;
         console.log(userPassword);
         break;
+    }
+    else{
+        // Faccio ricominciare il giro nel caso ci sia una risposta non vuota ma diversa da si e no
+        if(userAnswer != 'no'){
+            userAnswer = '';
+        }
     } 
 }
 
