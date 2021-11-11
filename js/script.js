@@ -54,16 +54,17 @@ ${firstName} ${lastName}:`);
                             // Interrompo la domanda
                             break question;
                         }
+                        // Messaggio di errore per testo vuoto o nullo + interruzione della label
                         else{
                             document.getElementById('answer-error').innerHTML = errorMessage;
                             document.getElementById('answer').style.display = 'none';
                             break question;
                         }
                 }
-                    // ..altrimenti   
+                // ..altrimenti   
                 else{
                     if(userAnswer == 'no'){
-                        // Stampo la password in pagina (nella stringa target dell'h1)
+                    // Stampo la password in pagina (nella stringa target dell'h1)
                     document.getElementById('user-password').innerHTML = userPassword;
                     // Interrompo la domanda
                     break question;
